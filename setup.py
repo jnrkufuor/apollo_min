@@ -16,7 +16,7 @@ if "torch" in missing:
 
 if missing:
     # implement pip as a subprocess:
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install',*missing])
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install',*missing," --user"])
     
 from flair.models import SequenceTagger
 tagger = SequenceTagger.load('ner')
