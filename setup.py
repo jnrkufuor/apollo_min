@@ -9,6 +9,8 @@ required = {'numpy','torchvision' ,'pandas','GoogleNews','goose3','IPython','skl
 installed = {pkg.key for pkg in pkg_resources.working_set}
 missing = required - installed
 
+print(missing)
+
 if "torch" in missing:
      subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'torch'])
 
